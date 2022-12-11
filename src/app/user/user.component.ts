@@ -8,9 +8,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserComponent implements OnInit {
   userId: string | null;
+  newId: string | null;
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.route.paramMap.subscribe((params) => {
+      this.newId = params.get('id');
+    });
     this.userId = this.route.snapshot.paramMap.get('id');
   }
 }
