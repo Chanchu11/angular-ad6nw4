@@ -4,3 +4,7 @@
   padding: 6px;
   height: 100px;
 }
+
+#Main {
+  display: flex;
+}

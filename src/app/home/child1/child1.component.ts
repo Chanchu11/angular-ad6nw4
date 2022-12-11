@@ -7,11 +7,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class Child1Component implements OnInit {
   name: string = '';
-  @Output() sendToParent= new EventEmitter<string>();
+  @Output() sendToParent = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit() {}
-  sendParent(){
+  sendParent() {
     this.sendToParent.emit(this.name);
     console.log(`${this.name} sent by child1`);
   }
