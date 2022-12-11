@@ -1,1 +1,9 @@
 <p>Home works</p>
+<p *ngIf="dataReceivedFromChild1 != undefined"> 
+  Data Received: {{dataReceivedFromChild1}} </p>
+<div id="myDiv">
+  <app-child1 (sendToParent)="getData($event)"> </app-child1>
+</div>
+<div id="myDiv">
+  <app-child2 [sendToChild]="dataReceivedFromChild1"> </app-child2>
+</div>
