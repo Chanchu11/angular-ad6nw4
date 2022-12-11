@@ -1,6 +1,6 @@
-<p>
-child1 works!
-</p>
+<p>child1 works!</p>
 
-<input type="text" [(ngModel)]="name" onchange="HandleChange()">
-<button type="button" id="btn" (click)="sendParent()" [disabled]="!name"> SEND </button>
+<input type="text" [(ngModel)]="name" />
+<button type="button" id="btn" (click)="sendParent()" [disabled]="!name">
+  SEND
+</button>
